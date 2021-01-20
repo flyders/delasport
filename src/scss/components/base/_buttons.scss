@@ -1,0 +1,27 @@
+/*****************************************************/
+/* Buttons */
+/*****************************************************/
+.btn {
+  @extend .center;
+  padding: 13px 43px;
+  font-size: 15px;
+  color: $text-color;
+  white-space: nowrap;
+  border-radius: 20px;
+  background-color: $btn-bgr;
+  text-decoration: none;
+  transition: background $speed-high ease-in;
+
+  &:hover {
+    background-color: darken($btn-bgr, 9%);
+  }
+
+  @include m(accent) {
+    color: $heading-color;
+    background-color: $btn-accent-bgr;
+
+    &:hover {
+      background-color: darken($btn-accent-bgr, 12%);
+    }
+  }
+}

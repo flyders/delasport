@@ -1,0 +1,94 @@
+/*****************************************************/
+/* Footer section */
+/*****************************************************/
+.ftr {
+  @extend .wrapper;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas: "logo"
+                      "social"
+                      "links1"
+                      "links2"
+                      "links3"
+                      "links4";
+  margin: 20px auto;
+  padding-top: 20px;
+  border-top: 2px solid $btn-bgr;
+
+  @include bp(m) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "logo links1 social"
+                      "links2 links3 links4";
+  }
+
+  @include bp(l) {
+    grid-template-columns: 190px 1fr 1fr 1fr 1fr 220px;
+    grid-template-areas: "logo links1 links2 links3 links4 social";
+  }
+
+  @include e(clmn) {
+    text-align: center;
+
+    @include bp(m) {
+      text-align: left;
+    }
+    &:nth-child(1) {
+      grid-area: logo;
+    }
+    &:nth-child(2) {
+      grid-area: links1;
+    }
+    &:nth-child(3) {
+      grid-area: links2;
+    }
+    &:nth-child(4) {
+      grid-area: links3;
+    }
+    &:nth-child(5) {
+      grid-area: links4;
+    }
+    &:nth-child(6) {
+      grid-area: social;
+    }
+  }
+
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  @include e(logo) {
+    img {
+      width: 160px;
+      margin-bottom: 22px;
+    }
+  }
+  @include e(cnt) {
+    line-height: 1.5;
+
+    a {
+      display: block;
+      margin-bottom: 7px;
+    }
+
+    @include m(social-link) {
+
+      a {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 20px;
+        background-color: $ele-bgr;
+        color: $btn-accent-bgr;
+        transition: background $speed-high ease-in;
+
+        &:hover {
+          background-color: darken($ele-bgr, 4%);
+        }
+      }
+    }
+  }
+  @include e(social-link) {
+    display: inline-block;
+  }
+}

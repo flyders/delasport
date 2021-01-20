@@ -1,0 +1,25 @@
+/*****************************************************/
+/* Typography */
+/*****************************************************/
+@import url('https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css');
+
+@font-face {
+  font-family: 'HelveticaNeueLTStdLt';
+  src: url('../../assets/fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.eot');
+  src: url('../../assets/fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.eot') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.woff2') format('woff2'),
+  url('../../assets/fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.ttf') format('truetype'),
+  url('../../assets/fonts/HelveticaNeueLTStdLt/HelveticaNeueLTStdLt.svg#HelveticaNeueLTStdLt') format('svg');
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTStdBd';
+  src: url('../../assets/fonts/HelveticaNeueLTStdBd/HelveticaNeueLTStdBd.eot');
+  src: url('../../assets/fonts/HelveticaNeueLTStdBd/HelveticaNeueLTStdBd.eot') format('embedded-opentype'),
+  url('../../assets/fonts/HelveticaNeueLTStdBd/HelveticaNeueLTStdBd.woff2') format('woff2'),
+  url('../../assets/fonts/HelveticaNeueLTStdBd/HelveticaNeueLTStdBd.woff') format('woff'),
+  url('../../assets/fonts/HelveticaNeueLTStdBd/HelveticaNeueLTStdBd.ttf') format('truetype'),
+  url('../../assets/fonts/HelveticaNeueLTStdBd/HelveticaNeueLTStdBd.svg#HelveticaNeueLTStdBd') format('svg');
+}
+

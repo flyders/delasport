@@ -1,0 +1,81 @@
+/*****************************************************/
+/* Carousels */
+/*****************************************************/
+.s-cat {
+  display: flex;
+  min-height: 30px;
+  padding-bottom: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $ele-bgr;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba($body-bgr, 0.2);
+    border-radius: 20px;
+  }
+
+  @include e(item) {
+    @extend .v-center;
+    width: 100%;
+    flex-direction: column;
+
+    &:hover {
+      .s-cat__img {
+        background-color: darken($ele-bgr, 4%);
+
+        @include m(white) {
+          background-color: $heading-color;
+        }
+      }
+    }
+  }
+
+  @include e(img) {
+    padding: 14px;
+    margin-right: 10px;
+    border-radius: 13px;
+    font-size: 25px;
+    color: adjust-hue($btn-accent-bgr, 40%);
+    background-color: $ele-bgr;
+    transition: background $speed-high ease-in;
+
+    @include m(m1) {
+      color: adjust-hue($btn-accent-bgr, 20%);
+    }
+    @include m(m2) {
+      color: adjust-hue($btn-accent-bgr, 50%);
+    }
+    @include m(m3) {
+      color: adjust-hue($btn-accent-bgr, 20%);
+    }
+    @include m(m4) {
+      color: adjust-hue($btn-accent-bgr, 90%);
+    }
+    @include m(m5) {
+      color: adjust-hue($btn-accent-bgr, 50%);
+    }
+    @include m(white) {
+      background-color: $heading-color;
+      max-height: 50px;
+      padding: 13px 50px;
+      border-radius: 4px;
+      transition: none;
+    }
+  }
+
+  @include e(title) {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 12px;
+    color: $text-color;
+    text-align: center;
+  }
+}

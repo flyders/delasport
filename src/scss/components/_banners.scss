@@ -1,0 +1,154 @@
+/*****************************************************/
+/* Banners section */
+/*****************************************************/
+.bnrs {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 24px;
+
+  @include e(bnr) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 230px;
+    padding: 20px 130px 20px 30px;
+    border-radius: 15px;
+    box-shadow: rgba($ele-bgr, 0.8) 0 2px 4px;
+
+    @include bp(m) {
+      min-height: 270px;
+      padding: 30px 130px 30px 30px;
+    }
+
+    @include m(sport) {
+      background-color: $ele-bgr;
+      background-repeat: no-repeat;
+      background-position: right 16% top 10px;
+      background-image: url('../../assets/img/f2.png');
+      background-size: contain;
+    }
+
+    @include m(casino) {
+      background-color: $ele-bgr;
+      background-repeat: no-repeat;
+      background-position: right 0 top 0;
+      background-image: url('../../assets/img/c3.png');
+      background-size: contain;
+    }
+
+    b {
+      display: block;
+      margin-top: 10px;
+      font-size: 24px;
+      letter-spacing: 1.5px;
+      color: $heading-color;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-block;
+    }
+  }
+}
+
+/*****************************************************/
+/* Promo articles section */
+/*****************************************************/
+.promo {
+  @extend .bnrs;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+  @include e(bnr) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img"
+                         "text";
+    min-height: 225px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: $ele-bgr;
+    transition: background $speed-high ease-in;
+
+    &:hover {
+      background-color: darken($ele-bgr, 4%);
+    }
+
+    @include bp(l) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "text img";
+    }
+  }
+  @include e(text) {
+    display: flex;
+    grid-area: text;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 10px 20px 30px;
+    min-height: 200px;
+
+    @include bp(l) {
+      justify-content: center;
+      height: auto;
+    }
+
+    b {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.8;
+
+      span {
+        display: block;
+        font-family: $HelveticaNeueLTStdBd;
+        color: $heading-color;
+      }
+    }
+  }
+  @include e(img) {
+    position: relative;
+    grid-area: img;
+    height: 200px;
+    overflow: hidden;
+
+    @include bp(l) {
+      height: auto;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+  }
+
+  @include e(ribbon) {
+    width: 22px;
+    padding: 7px 0;
+    position: absolute;
+    top: -6px;
+    left: 15px;
+    text-align: center;
+    border-top-left-radius: 3px;
+    background: $ribbon-bgr;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 0;
+      width: 0;
+      bottom: -5.5px;
+      left: 0;
+      border-left: 11px solid $ribbon-bgr;
+      border-right: 11px solid $ribbon-bgr;
+      border-bottom: 6px solid transparent;
+    }
+
+    .bx {
+      margin-top: 5px;
+      font-size: 10px;
+      color: $heading-color;
+    }
+  }
+}

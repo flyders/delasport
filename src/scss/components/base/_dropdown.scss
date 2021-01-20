@@ -1,0 +1,34 @@
+/*****************************************************/
+/* Dropdown */
+/*****************************************************/
+$dropdown-basic-height: 41px;
+
+.dropdown {
+  position: relative;
+  @include e(select) {
+    min-width: 130px;
+    height: $dropdown-basic-height;
+    padding: 0 24px 0 18px;
+    background: $ele-bgr;
+    font-size: 14px;
+    color: $text-color;
+    text-overflow: ellipsis;
+    border-radius: $dropdown-basic-height;
+    border: 2px solid $text-color;
+    box-sizing: border-box;
+    appearance: none;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+  }
+  @include e(caret) {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: $text-color;
+    cursor: pointer;
+    z-index: 1;
+    pointer-events: none;
+  }
+}

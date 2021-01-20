@@ -1,0 +1,25 @@
+/*****************************************************/
+/* Helpers */
+/*****************************************************/
+.wrapper {
+  padding: 0 10px;
+  max-width: 1072px;
+  min-width: 340px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.v-center {
+  display: flex;
+  align-items: center;
+}
+.h-center {
+  display: flex;
+  justify-content: center;
+}

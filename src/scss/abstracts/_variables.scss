@@ -1,0 +1,31 @@
+/*===== Colors =====*/
+$ele-bgr: #1a212b;
+$body-bgr: #232A34;
+$heading-color: #ffffff;
+$text-color: #7E8894;
+$overlay: rgba($text-color, 0.2);
+$btn-bgr: #30373F;
+$btn-accent-bgr: #1DDA61;
+$ribbon-bgr: #FDA932;
+
+/*===== Speed =====*/
+$speed: 1s;
+$speed-high: .3s;
+
+/*===== others =====*/
+$wrapper: 1072px;
+$nav-height: 70px;
+
+/*===== Fonts =====*/
+$HelveticaNeueLTStdLt: "HelveticaNeueLTStdLt", "Helvetica", "Arial", sans-serif;
+$HelveticaNeueLTStdBd: "HelveticaNeueLTStdBd", "Helvetica", "Arial", sans-serif;
+
+/*===== z index =====*/
+$z-index: 100;
+
+/*===== Breakpoints =====*/
+$breakpoints: (
+  l: ( dir: min, size: 1072px ),
+  m: ( dir: min, size: 650px ),
+  s: ( dir: min, size: 420px ),
+);

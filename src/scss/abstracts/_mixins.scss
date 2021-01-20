@@ -1,0 +1,35 @@
+@mixin bp($width) {
+  @if map_has_key($breakpoints, $width) {
+    $size: map_get(map_get($breakpoints, $width), size);
+    $type: map_get(map_get($breakpoints, $width), dir);
+    @media only screen and (#{$type}-width: $size) {
+        @content;
+    }
+  } @else {
+    background-color: red;
+  }
+}
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  @include element($element)  {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  @include modifier($modifier) {
+    @content;
+  }
+}

@@ -1,0 +1,37 @@
+/*****************************************************/
+/* Global styles */
+/*****************************************************/
+html, body, #app {
+  -webkit-text-size-adjust: none;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 340px;
+  padding-top: $nav-height;
+  background-color: $body-bgr;
+  font-family: $HelveticaNeueLTStdLt;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;                 //prevent callout to copy image, etc when tap to hold
+  -webkit-text-size-adjust: none;              //prevent webkit from resizing text to fit
+  //-webkit-user-select: none;                   //prevent copy paste, to allow, change 'none' to 'text'
+}
+a, p, span, em, strong, label, li, div {
+  font-family: $HelveticaNeueLTStdLt;
+  color: $text-color;
+}
+h1, h2, h3, h4, b {
+  font-family: $HelveticaNeueLTStdBd;
+  color: $heading-color;
+}
+.section-title {
+  margin: 25px 0 15px;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+
